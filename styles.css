@@ -1,0 +1,36 @@
+body {
+    color:rgb(212, 155, 80);
+    text-align: center;
+}
+
+#main{
+    display:grid;
+    width:auto;
+    height:350px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+.tiles {
+    width: auto;
+    height:auto;
+	background-color:rgb(6, 6, 154);
+	border: 4px solid black;
+	padding: 0.25em;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+#userEntry {
+    height: 30px;
+    padding-top: 50px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    color:rgb(212, 155, 80);
+}
