@@ -23,6 +23,10 @@ body {
     font-weight: bolder;
 }
 
+.tiles:hover {
+    background-color:rgb(160, 128, 86) ;
+}
+
 #userEntry {
     height: 30px;
     padding-top: 50px;

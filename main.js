@@ -5,7 +5,7 @@ let score = 0
 let reward = 0
 const clickables = $(".tiles")
 const questions = $("#question")
-const yourScore = $('p')
+const yourScore = $('#dollarAmount')
 clickables.on("click",(event)=>{
     console.log(event.target.innerHTML)
     if(count === 0){
@@ -35,15 +35,14 @@ clickables.on("click",(event)=>{
 
 $("button").on("click",()=>{
     if(count>0){
-        if($("input").val() === "m"){
+        if($("input").val() === rightAnswer){
             questions.text("Correct!!")
             score += parseInt(reward.split("$")[1])
-            console.log(score)
-            yourScore.text(`Your Score:$${score}`)
+            yourScore.text(`YOUR SCORE:$${score}`)
         } else {
             questions.text("InCorrect!!")
             score -= parseInt(reward.split("$")[1])
-            yourScore.text(`Your Score:$${score}`)
+            yourScore.text(`YOUR SCORE:$${score}`)
         }
     }
     count = 0
