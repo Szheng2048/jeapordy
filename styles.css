@@ -11,6 +11,28 @@ body {
     grid-template-rows: repeat(5,1fr);
 }
 
+#categories{
+    display:grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: minmax(1fr);
+}
+
+.newCat {
+    width: 1fr;
+    height:auto;
+    color:whitesmoke;
+	background-color:rgb(6, 6, 154);
+	border: 4px solid black;
+	padding: 0.25em;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-weight: bolder;
+    line-break: auto;
+}
+
 .tiles {
     width: auto;
     height:auto;
