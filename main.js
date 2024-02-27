@@ -20,17 +20,19 @@ clickables.on("click",(event)=>{
         }
         //pools specific questions for the generator to give
         let randomize = Math.floor(Math.random()*targetQuestions.length)
-        let newQuestion = $(`<p>${targetQuestions[randomize-1].question}</p>`)
+        let newQuestion = targetQuestions[randomize-1].question
         rightAnswer =`${targetQuestions[randomize-1].answer}`
         //selects one of the multiple questions within range and also the right answer for the question
-        questions.append(newQuestion)
+        console.log(newQuestion)
+        questions.text(newQuestion)
         console.log(rightAnswer)
         //adds the question to the browser
         targetQuestions.length = 0
         //resets the questions
+        event.target.innerHTML = ""
+        event.target.style.pointerEvents = "none"
     }
     count++
-
 })
 
 $("button").on("click",()=>{
