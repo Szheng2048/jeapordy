@@ -11,7 +11,6 @@ function loadGame (){
     let randomShow = jeopardyQuestions[Math.ceil(Math.random()*jeopardyQuestions.length)].showNumber
     //finds a random shownumber
     let randomShowGroup = jeopardyQuestions.filter((obj) => obj.showNumber === randomShow)
-    console.log(randomShowGroup)
     let testArr = []
     //filter for category name
     for(let i = 0; i < 5;i++){
@@ -34,27 +33,22 @@ function loadGame (){
         return loadGame()
     }
     let cat1Html = $(".cat1")
-    console.log(cat1)
     for(let i = 0;i<5;i++){
     cat1Html.eq(i).text(cat1[i].value)
     }
     let cat2Html = $(".cat2")
-    console.log(cat2)
     for(let i = 0;i<5;i++){
         cat2Html.eq(i).text(cat2[i].value)
     }
     let cat3Html = $(".cat3")
-    console.log(cat3)
     for(let i = 0;i<5;i++){
         cat3Html.eq(i).text(cat3[i].value)
     }
     let cat4Html = $(".cat4")
-    console.log(cat4)
     for(let i = 0;i<5;i++){
         cat4Html.eq(i).text(cat4[i].value)
     }
     let cat5Html = $(".cat5")
-    console.log(cat5)
     for(let i = 0;i<5;i++){
         cat5Html.eq(i).text(cat5[i].value)
     }
@@ -87,7 +81,6 @@ function loadGame (){
                 let selection = cat5.filter((obj)=> obj.value === reward)
                 $("#question").text(selection[0].question)
                 rightAnswer = selection[0].answer
-                console.log(rightAnswer)
             }
             //loads the right question on the screen
             event.target.innerHTML = ""
